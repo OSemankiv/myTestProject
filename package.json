@@ -1,0 +1,27 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+     "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSemankiv/myTestProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OSemankiv/myTestProject/issues"
+  },
+  "homepage": "https://github.com/OSemankiv/myTestProject#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^2.2.19"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
