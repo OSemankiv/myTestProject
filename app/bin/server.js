@@ -1,12 +1,33 @@
-const express       = require ('express');
-const bodyParser    = require ('body-parser');
+const express = require ('express');
+const bodyParser = require ('body-parser');
+const Sequelize = require("sequelize");
+const dbconfig = require('../config/db');
+
+
+const sequelize = new Sequelize({
+    ...dbconfig
+});
+
 
 const app = express();
-
 const port = 8000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded ({ extended: true}));
+
+//app.use (require('./app/routes'))
+
+sequelize
+.authenticate()
+.then(() => {
+
+
+  console.log('Successfull');
+})
+.catch(err => {
+  console.error('Connection error:', err);
+});
+
 
 let users = [{
                 id: 1,
